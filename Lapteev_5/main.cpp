@@ -8,12 +8,16 @@ int main()
 	setlocale(LC_ALL, "russian");
 
 	int m[3][3];
+	int k = 0;
+	int arr[9];
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)
 		{
 			cout << "M[" << i << "][" << j << "] = ";
 			cin >> m[i][j];
+			arr[k] = m[i][j];
+			k++;
 		}
 	}
 
@@ -25,12 +29,6 @@ int main()
 			cout << setw(3) << m[i][j] << " ";
 		}
 		cout << "\n";
-	}
-
-	int arr[9];
-	for (int i = 0; i < 9; i++)
-	{
-		arr[i] = m[i / 3][i % 3];
 	}
 
 	cout << "\nArr: ";
